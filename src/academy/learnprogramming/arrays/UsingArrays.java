@@ -1,0 +1,77 @@
+package academy.learnprogramming.arrays;
+
+import java.util.Arrays;
+
+public class UsingArrays {
+
+    public static void main(String[] args) {
+        String[] pets = {"parrot", "cat", "dog"};
+        System.out.println(pets[0]);
+        System.out.println(pets[1]);
+        System.out.println(pets[2]);
+        // System.out.println(pets[3]); // throws ArrayIndexOutOfBounds since only has 3 elements
+
+        pets[0] = "bird";
+
+        for (int i = 0; i < pets.length; i++) {
+            System.out.println(pets[i]);
+        }
+
+        for (int i = 0; i <= pets.length -1; i++) {
+            System.out.println(pets[i]);
+        }
+
+        // prints hash code
+        System.out.println(pets);
+
+        // prints contents
+        System.out.println(Arrays.toString(pets));
+
+        int[] numbers = new int[5]; // initialises each element to 0 as int type
+        System.out.println(Arrays.toString(numbers));
+
+        String[] newPets = new String[5]; //Strings default to null, so initialises each element to null
+        System.out.println(Arrays.toString(newPets));
+
+        for (int i = 0; i < numbers.length; i++) {
+            // 1. iteration i = 0;
+                // numbers[0] = 0 + 10 -> 10
+            // 2. iteration i = 1;
+                // numbers[1] = 1 + 10 -> 11
+            // 3. iteration i = 2;
+                //numbers[2]= 2 + 10 -> 12;
+            // 4. iteration i = 3;
+            //numbers[3]= 3 + 10 -> 13;
+            // 5. iteration i = 4;
+            //numbers[3]= 4 + 10 -> 14;
+
+            numbers[i] = i + 10;
+        }
+
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("numbers[" + i + "] = " + numbers[i]);
+        }
+
+        System.out.println(numbers);
+        System.out.println(Arrays.toString(numbers));
+
+        // Arrays of wrapper types
+            // 1. iteration 0 -> 0 % 3 =  0
+            // 2. iteration 1 -> 1 % 3 =  1
+            // 3. iteration 2 -> 2 % 3 =  2
+            // 4. iteration 3 -> 3 % 3 =  0
+        Integer[] nums = new Integer[4];
+        System.out.println(Arrays.toString(nums));
+
+        // 1. iteration 0 -> 0 % 3 =  0
+        // 2. iteration 1 -> 1 % 3 =  1
+        // 3. iteration 2 -> 2 % 3 =  2
+        // 4. iteration 3 -> 3 % 3 =  0
+        for (int i = 0; i < nums.length ; i++) {
+            nums[i] = i % 3;
+        }
+
+        System.out.println(Arrays.toString(nums));
+        
+    }
+}
