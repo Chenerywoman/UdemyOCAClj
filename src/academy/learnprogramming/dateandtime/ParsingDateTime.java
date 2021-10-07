@@ -30,11 +30,5 @@ public class ParsingDateTime {
         LocalDate anotherDate = LocalDate.parse(dateString, formatter);
         anotherDate.plusMonths(5).plusDays(5); // dates are immutable, not assigning a new value - this is ignored
         System.out.println(formatter.format(anotherDate));
-
-
-
-
-
-
     }
 }
