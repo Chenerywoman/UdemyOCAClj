@@ -54,6 +54,4 @@ public class MethodsWithExceptions {
         }
         // bear.eatPlants(-2); // unchecked exception - no need to put inside try & catch block
     }
-
-
 }
